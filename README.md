@@ -1,74 +1,57 @@
-# npm_package_react_boilerplate
+# Wonder Table
 
-Create a account on [npmjs](https://www.npmjs.com/).
-Clone or download this repostiory.
+A simple table used for HRNet on OpenClassRoom's course
 
 ## Installation
 
 ```
-npm i
+npm i wonder-table
 ```
 
-## Make a component
+## How to use
 
-Create your component in ./lib/index.js.  
-Make sure the package name does not exist with the search on the npm site.
+This package was built to be used like a React component.
 
-## Edit package.json
-
-Modify the package.json file.
+In your project import the package
 
 ```
-"name": "Package name",
-"description": "Description of package",
-"author": "Dev name",
-"keywords": ["a", "short", "list", "of", "keywords"],
-"version": "0.1.0",
-"private": false,
-"main": "dist/index.js",
-"module": "dist/index.js",
-"files": [ "dist", "README.md" ],
-"repository": {
-    "type": "git",
-    "url": "Your repository address"
+import Table from "wonder-table";
+```
+
+Then use it
+
+```
+<Table list={your list} />
+```
+
+## Parameters
+
+- "list" = The data, must be provided as an Array of object : [{},{},{}]
+- pageNum = Number, able to open the table directly on other pages ( it's a zero based) / default : "0"
+- width = Css value for the width of the table / default : "100%"
+- height = Css value for the height of the table / default : "auto"
+
+## Providing data
+
+Your data can be as long as you want, without limit of categories, but it must respect some structure :
+
+- It must be composed only with objects inside an array
+- the property name inside the object must be writing using underscore instead of space
+
+And example
+
+```
+[
+{
+my_first_category : "my first value",
+my_second_category : "my second value",
+end_of_object : "1"
 },
+{
+my_first_category : "my first value",
+my_second_category : "my second value",
+maybe_other_category : "other value",
+end_of_object : "2"
+},
+]
 ```
-
-## Documentation
-
-
-Edit this readme.md file to indicate how to use and install your package. If you have published your package on github this file will be used for documentation on the npm site.
-
-## Connect to npm and publish
-
-Use git bash to execute "npm run build" command. The component will be created in the dist directory.
-
-```
-npm run build
-```
-
-Connect to your npm account with the npm login command.
-
-
-```
-npm run login
-```
-
-And publish
-
-```
-npm run publish
-```
-
-## Note
-
-
-If you have an "E403" error. Make sure you have validated your npm account. If the error persists, ask to receive the confirmation email again.
-
-## Source
-
-
-[Based on this article](https://levelup.gitconnected.com/publish-react-components-as-an-npm-package-7a671a2fb7f/)
-
-
-

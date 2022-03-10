@@ -1,0 +1,91 @@
+.table-header,
+.table-footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 0.5em;
+}
+
+.select-entries {
+  margin: 0 0.5em;
+}
+
+table {
+  table-layout: fixed;
+}
+
+.tr-even {
+  backdrop-filter: brightness(0.9);
+}
+
+.tr:hover {
+  backdrop-filter: brightness(0.86);
+  cursor: pointer;
+}
+
+.th {
+  text-align: start;
+  position: relative;
+  padding: 5px;
+  cursor: pointer;
+  overflow: hidden;
+  flex-wrap: wrap;
+  text-overflow: ellipsis;
+}
+
+td {
+  overflow: hidden;
+  flex-wrap: wrap;
+  text-overflow: ellipsis;
+}
+
+.th:hover {
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+}
+
+.cat-btn {
+  line-height: 150%;
+  margin: 0;
+}
+
+.active {
+  backdrop-filter: brightness(0.7);
+}
+
+.active::after {
+  display: inline-block;
+  margin: 0 0.1em;
+  padding: 0;
+  vertical-align: middle;
+  content: "";
+  width: 1em;
+  height: 1em;
+  background: url("arrow.svg") no-repeat;
+}
+
+.reverse::after {
+  transform: rotate(180deg);
+}
+
+.page-btn {
+  border: none;
+  background: none;
+  width: 2.5em;
+  height: 2.5em;
+  cursor: pointer;
+  margin: 5px;
+  border-radius: 50px;
+}
+
+.page-btn:hover {
+  backdrop-filter: brightness(0.7);
+}
+
+.page-btn:active {
+  backdrop-filter: brightness(0.5);
+}
+
+.active-page-btn {
+  font-weight: bold;
+  backdrop-filter: brightness(0.8);
+}
