@@ -1,13 +1,9 @@
 {
-  "name": "package-name",
-  "description": "Description of component",
-  "author": "Dev name",
+  "name": "wonder-table",
+  "description": "A simple table",
+  "author": "Steven Fabre",
   "keywords": [
-    "a",
-    "short",
-    "list",
-    "of",
-    "keywords"
+    "table"
   ],
   "version": "0.1.0",
   "private": false,
@@ -56,8 +52,8 @@
     ]
   },
   "devDependencies": {
-    "@babel/cli": "^7.16.0",
-    "@babel/core": "^7.16.0",
-    "@babel/preset-env": "^7.16.4"
+    "@babel/cli": "^7.17.6",
+    "@babel/core": "^7.17.5",
+    "@babel/preset-env": "^7.16.11"
   }
 }
