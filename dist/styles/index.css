@@ -89,3 +89,16 @@ td {
   font-weight: bold;
   backdrop-filter: brightness(0.8);
 }
+
+button {
+  margin: 1em;
+  height: 2.5em;
+  border: none;
+  background-color: white;
+  border-radius: 50px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+button:hover {
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 2px 6px;
+}

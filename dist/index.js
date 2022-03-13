@@ -115,6 +115,7 @@ function Table(_ref) {
   };
 
   return /*#__PURE__*/_react.default.createElement("div", {
+    className: "table-container",
     "data-testid": "awesome-table"
   }, /*#__PURE__*/_react.default.createElement("div", {
     className: "table-header"
