@@ -82,7 +82,7 @@ function Table({ list, pageNum = 0, width = "100%", height = "auto" }) {
     }
   };
   return (
-    <div data-testid="awesome-table">
+    <div className="table-container" data-testid="awesome-table">
       <div className="table-header">
         <div>
           Show
