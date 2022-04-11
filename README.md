@@ -3,6 +3,8 @@
 A simple table used for HRNet on OpenClassRoom's course
 I tried to recreate "DataTables" Jquery's plugin in a React package ( https://datatables.net/ )
 
+Link to npm package : https://www.npmjs.com/package/wonder-table
+
 ## Installation
 
 ```
