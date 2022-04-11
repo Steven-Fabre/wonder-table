@@ -23,6 +23,14 @@ function _getRequireWildcardCache(nodeInterop) { if (typeof WeakMap !== "functio
 
 function _interopRequireWildcard(obj, nodeInterop) { if (!nodeInterop && obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(nodeInterop); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (key !== "default" && Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
 
+/**
+ * This package will transform an Array of Objects into wonderful table
+ * @constructor
+ * @param {Array} list - Array of Objects used as data.
+ * @param {number} pageNum - Able to instance page at specific number.
+ * @param {string} width - Allow to change the width size of the Table.
+ * @param {string} height - Allow to change the height size of the Table.
+ */
 function Table(_ref) {
   let {
     list,
@@ -35,7 +43,8 @@ function Table(_ref) {
   const [pageSize, setPageSize] = (0, _react.useState)(10);
   const [data, setData] = (0, _react.useState)(list);
   const [order, setOrder] = (0, _react.useState)(1);
-  const [activeCategorie, setActiveCategorie] = (0, _react.useState)(Object.keys(list[0])[0]);
+  const [activeCategorie, setActiveCategorie] = (0, _react.useState)(Object.keys(list[0])[0]); // Before rendering, the columns names are pulled from the data
+
   (0, _react.useEffect)(() => {
     const NewColName = [];
     list.forEach(object => {
@@ -44,7 +53,8 @@ function Table(_ref) {
       });
     });
     setColNames(NewColName);
-  }, []);
+  }, []); // Watching for change of the active category to sort data
+
   (0, _react.useEffect)(() => {
     var _document$querySelect, _document$body$queryS;
 

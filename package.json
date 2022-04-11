@@ -15,7 +15,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "Your repository address"
+    "url": "https://github.com/Steven-Fabre/wonder-table"
   },
   "dependencies": {
     "@babel/polyfill": "^7.12.1",

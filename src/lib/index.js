@@ -1,6 +1,15 @@
 import React, { useEffect, useState } from "react";
 import "./styles/index.css";
 
+/**
+ * This package will transform an Array of Objects into wonderful table
+ * @constructor
+ * @param {Array} list - Array of Objects used as data.
+ * @param {number} pageNum - Able to instance page at specific number.
+ * @param {string} width - Allow to change the width size of the Table.
+ * @param {string} height - Allow to change the height size of the Table.
+ */
+
 function Table({ list, pageNum = 0, width = "100%", height = "auto" }) {
   const [colNames, setColNames] = useState([]);
   const [page, setPage] = useState(pageNum);
@@ -9,6 +18,7 @@ function Table({ list, pageNum = 0, width = "100%", height = "auto" }) {
   const [order, setOrder] = useState(1);
   const [activeCategorie, setActiveCategorie] = useState(Object.keys(list[0])[0]);
 
+  // Before rendering, the columns names are pulled from the data
   useEffect(() => {
     const NewColName = [];
     list.forEach((object) => {
@@ -19,6 +29,7 @@ function Table({ list, pageNum = 0, width = "100%", height = "auto" }) {
     setColNames(NewColName);
   }, []);
 
+  // Watching for change of the active category to sort data
   useEffect(() => {
     document.querySelectorAll(".cat-btn")?.forEach((el) => {
       el.classList.remove("active");
