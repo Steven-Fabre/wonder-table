@@ -58,3 +58,11 @@ end_of_object : "2"
 },
 ]
 ```
+
+## Functions
+
+The Data-tables is provided with differents functions
+
+- a Search bar, able to filter through all entries of the Data
+- a dropdown for switching number of elements per page
+- a sort By function activated by clicking on a column name, switching by ascending/descending
